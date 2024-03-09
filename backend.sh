@@ -12,3 +12,4 @@ npm install
 systemctl enable backend
 systemctl start backend
 mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql
+#hi
