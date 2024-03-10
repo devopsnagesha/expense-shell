@@ -1,3 +1,6 @@
+app_dir=/app
+component=backend
+
 source common.sh
 
 Print_Task_Heading "Adding Application User"
