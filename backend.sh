@@ -1,7 +1,27 @@
+source common.sh
+
+
+mysql_root_password=$1
 app_dir=/app
 component=backend
 
-source common.sh
+# If password is not provided then we will exit
+if [ -z "${mysql_root_password}" ]; then
+  echo Input Password is missing.
+  exit 1
+fi
+
+Print_Task_Heading "Disable default NodeJS Version Module"
+dnf module disable nodejs -y &>>$LOG
+Check_Status $?
+
+Print_Task_Heading "Enable NodeJS module for V20"
+dnf module enable nodejs:20 -y &>>$LOG
+Check_Status $?
+
+Print_Task_Heading "Install NodeJS"
+dnf install nodejs -y &>>$LOG
+Check_Status $?
 
 Print_Task_Heading "Adding Application User"
 id expense &>>$LOG
