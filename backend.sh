@@ -1,3 +1,4 @@
+source common.sh
 
 Print_Task_Heading "Adding Application User"
 id expense &>>$LOG
