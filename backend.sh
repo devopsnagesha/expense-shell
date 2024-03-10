@@ -45,6 +45,7 @@ Print_Task_Heading "Start Backend Service"
 systemctl daemon-reload &>>$LOG
 systemctl enable backend &>>$LOG
 systemctl start backend &>>$LOG
+systemctl start backend &>>$LOG
 Check_Status $?
 
 Print_Task_Heading "Install MySQL Client"
