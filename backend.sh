@@ -31,7 +31,7 @@ fi
 Check_Status $?
 
 Print_Task_Heading "Copy Backend Service file"
-cp backend.service /etc/systemd/system/backend.service &>>$LOG
+cp main.yml /etc/systemd/system/main.yml &>>$LOG
 Check_Status $?
 
 App_PreReq
